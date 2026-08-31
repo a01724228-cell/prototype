@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SensoLab | Sensory Science & Product Testing</title>
+  <style>
+    :root {
+      --primary: #2b580c;
+      --accent: #639a67;
+      --bg: #f9f9f9;
+      --text: #333;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(135deg, #e2ecd8, #f9f9f9);
+    }
+    .hero h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.1rem; color: #555; max-width: 600px; margin: 0 auto 1.5rem; }
+    .btn {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    .section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .card h3 { color: var(--primary); margin-top: 0; }
+    
+    /* Mock Form */
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, select {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
 
+    /* Mock AI Chatbot Widget */
+    .chat-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      padding: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">SensoLab</div>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#studies">Past Studies</a>
+      <a href="#register">Become a Tester</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Shape the Future of Products</h1>
+    <p>Join SensoLab's exclusive tester network or partner with us to gather high-precision sensory and consumer insights.</p>
+    <a href="#register" class="btn">Register as a Panelist</a>
+  </section>
+
+  <section id="studies" class="section">
+    <h2>Verified Past Studies & Impact</h2>
+    <p>Building trust through transparent methodology and proven research history.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Beverage Flavor Profile Test</h3>
+        <p>Evaluated consumer sensory preferences across 5 new botanical tea formulations with 120 target panelists.</p>
+      </div>
+      <div class="card">
+        <h3>Dairy Texture Optimization</h3>
+        <p>Assessed mouthfeel and consistency acceptance for plant-based yogurt alternatives in university demographic groups.</p>
+      </div>
+      <div class="card">
+        <h3>Packaging & Aroma Retention</h3>
+        <p>Tested sustainable packaging performance and fragrance preservation over a 30-day trial period.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="register" class="section">
+    <h2>Join the "SensoClub" Panel</h2>
+    <p>Fill out this quick 1-minute form to register for upcoming sensory trials in your area.</p>
+    <form onsubmit="event.preventDefault(); alert('Prototype Note: Registration submitted successfully!');">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <select required>
+        <option value="">Select Demographic Category...</option>
+        <option value="student">University Student</option>
+        <option value="parent">Parent / Household Purchaser</option>
+        <option value="other">General Consumer</option>
+      </select>
+      <button type="submit" class="btn">Submit Application</button>
+    </form>
+  </section>
+
+  <div class="chat-widget" onclick="alert('AI Assistant Prototype:\n\nHello! I am SensoBot 🤖\nHow can I help you register or answer your study questions today?')">
+    💬 Chat with AI Assistant
+  </div>
+
+</body>
+</html>
