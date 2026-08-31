@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SensoLab Solutions | Sensory Science & Product Testing</title>
+  <title>SensoLab Solutions | Innovando la Experiencia Sensorial</title>
   <style>
     :root {
       --primary-teal: #1398a4;
@@ -27,6 +27,9 @@
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     .logo-container img {
       height: 45px;
@@ -54,9 +57,10 @@
     }
     .hero p { 
       font-size: 1.15rem; 
-      max-width: 650px; 
+      max-width: 750px; 
       margin: 0 auto 1.8rem; 
       opacity: 0.95;
+      line-height: 1.5;
     }
     .btn {
       background-color: var(--accent-orange);
@@ -103,8 +107,13 @@
       color: var(--primary-teal); 
       margin-top: 0; 
     }
+    .card a {
+      color: var(--accent-orange);
+      text-decoration: none;
+      font-weight: bold;
+    }
     
-    /* Recruitment Form */
+    /* Panel Recruitment Form */
     form {
       background: #fff;
       padding: 2rem;
@@ -123,6 +132,25 @@
     }
     input:focus, select:focus {
       outline: 2px solid var(--primary-teal);
+    }
+
+    footer {
+      background-color: var(--dark-bg);
+      color: white;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+    }
+    .footer-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .footer-content h4 {
+      color: var(--accent-orange);
+      margin-top: 0;
     }
 
     /* AI Chatbot Widget Prototype */
@@ -151,63 +179,98 @@
 
   <header>
     <div class="logo-container">
-      <!-- Ensure your image file in GitHub is named logo.png -->
       <img src="logo.png" alt="SensoLab Solutions Logo">
     </div>
     <nav>
-      <a href="#about">About Us</a>
-      <a href="#studies">Past Studies</a>
-      <a href="#register">Become a Tester</a>
-      <a href="#contact">Contact</a>
+      <a href="#somos">¿Quiénes Somos?</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#participa">Participa</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Shape the Future of Products</h1>
-    <p>Join SensoLab's sensory panel network or partner with our lab to gather high-precision consumer research.</p>
-    <a href="#register" class="btn">Register as a Panelist</a>
+    <h1>Innovando la Experiencia Sensorial</h1>
+    <p>Ofrecemos tecnologías de análisis sensorial y conocimiento del consumidor que permiten llegar a la formulación óptima de tu producto, cautivando los sentidos desde su diseño.</p>
+    <a href="#participa" class="btn">¡Inscríbete y Participa!</a>
   </section>
 
-  <!-- Past Studies Showcase -->
-  <section id="studies" class="section">
-    <h2>Verified Past Studies</h2>
-    <p>Building client and panelist trust through verified sensory research methodologies.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>Beverage Flavor Profile Test</h3>
-        <p>Evaluated consumer sensory preferences across 5 new botanical tea formulations with 120 target panelists.</p>
-      </div>
-      <div class="card">
-        <h3>Dairy Texture Optimization</h3>
-        <p>Assessed mouthfeel and consistency acceptance for plant-based yogurt alternatives in university demographic groups.</p>
-      </div>
-      <div class="card">
-        <h3>Packaging & Aroma Retention</h3>
-        <p>Tested sustainable packaging performance and fragrance preservation over a 30-day trial period.</p>
-      </div>
+  <!-- ¿Quiénes Somos? y Misión -->
+  <section id="somos" class="section">
+    <h2>¿Quiénes Somos?</h2>
+    <p>SensoLab Solutions es una empresa especializada en el área de evaluación sensorial, ofreciendo sus servicios a la industria alimentaria, cosmética y farmacéutica. Contamos con personal altamente capacitado, infraestructura especializada y técnicas vanguardistas de análisis sensorial y conocimiento de consumidores para poder cumplir las necesidades de nuestros clientes.</p>
+    
+    <div class="card" style="margin-top: 1.5rem;">
+      <h3>Nuestra Misión</h3>
+      <p>Ofrecer a nuestros clientes las instalaciones, tecnologías de análisis sensorial y de conocimiento del consumidor que les permitan llegar a la formulación óptima de su producto, de manera rápida y con la confianza de conocerlo tan bien que lograrán cautivar los sentidos del consumidor desde su diseño y a lo largo de su vida útil.</p>
     </div>
   </section>
 
-  <!-- Panel Recruitment Form -->
-  <section id="register" class="section">
-    <h2>Join the Panelist Network</h2>
-    <p>Fill out this quick form to register for upcoming product sensory trials in your area.</p>
-    <form onsubmit="event.preventDefault(); alert('Prototype Note: Registration submitted successfully!');">
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
+  <!-- Servicios -->
+  <section id="servicios" class="section">
+    <h2>Nuestros Servicios</h2>
+    <p>SensoLab Solutions pone al alcance diferentes herramientas para el éxito comercial de tus productos. Te ayudamos a conseguirlo resolviendo retos y diferentes estrategias de acuerdo a tus necesidades, tiempo y recursos.</p>
+    
+    <div class="grid">
+      <div class="card">
+        <h3>Estudios con Panel Entrenado</h3>
+        <p>Evaluaciones técnicas precisas con expertos capacitados en perfiles sensoriales.</p>
+        <a href="#contacto">Ver más...</a>
+      </div>
+      <div class="card">
+        <h3>Estudios con Consumidores</h3>
+        <p>Análisis directo de preferencias, aceptación y pruebas de mercado con consumidores reales.</p>
+        <a href="#contacto">Ver más...</a>
+      </div>
+      <div class="card">
+        <h3>Servicios Adicionales</h3>
+        <p>Soluciones personalizadas y consultoría adaptada a las necesidades de tu industria.</p>
+        <a href="#contacto">Ver más...</a>
+      </div>
+    </div>
+    <div style="margin-top: 2rem; text-align: center;">
+      <a href="#contacto" class="btn" style="background-color: var(--primary-teal);">Descarga nuestra cartelera de servicios</a>
+    </div>
+  </section>
+
+  <!-- Participa / Panelist Onboarding -->
+  <section id="participa" class="section">
+    <h2>Participa</h2>
+    <p>¡Únete a nuestro grupo selecto de consumidores y obtén diferentes recompensas por tu participación! La investigación sensorial no es posible sin las personas que desean evaluar nuevos productos. Para inscribirte, llena el siguiente formulario para participar en nuestras sesiones sensoriales e incentivos. ¡Gracias!</p>
+    
+    <form onsubmit="event.preventDefault(); alert('Prototipo SensoLab:\n\n¡Gracias por registrarte! Nos pondremos en contacto contigo para las próximas sesiones sensoriales.');">
+      <input type="text" placeholder="Nombre Completo" required>
+      <input type="email" placeholder="Correo Electrónico" required>
       <select required>
-        <option value="">Select Demographic Category...</option>
-        <option value="student">University Student</option>
-        <option value="parent">Parent / Household Purchaser</option>
-        <option value="other">General Consumer</option>
+        <option value="">Selecciona tu Categoría...</option>
+        <option value="estudiante">Estudiante Universitario</option>
+        <option value="ama_de_casa">Amas de Casa / Comprador del Hogar</option>
+        <option value="consumidor_general">Consumidor General</option>
       </select>
-      <button type="submit" class="btn">Submit Application</button>
+      <button type="submit" class="btn">Inscribirme al Panel</button>
     </form>
   </section>
 
-  <!-- AI Chatbot Prototype Marker -->
-  <div class="chat-widget" onclick="alert('AI Assistant Prototype:\n\nHello! I am the SensoLab Bot 🤖\nHow can I help you register or answer your study questions today?')">
-    💬 Chat with AI Assistant
+  <!-- Footer con Contacto y Ubicación -->
+  <footer id="contacto">
+    <div class="footer-content">
+      <div>
+        <h4>Contacto</h4>
+        <p>Si deseas una cotización o información adicional de nuestros servicios, escríbenos a:</p>
+        <p><strong>Email:</strong> <a href="mailto:contacto@sensolab.mx" style="color: white;">contacto@sensolab.mx</a></p>
+      </div>
+      <div>
+        <h4>Ubicación</h4>
+        <p>Centro de Innovación y Transferencia Tecnológica</p>
+        <p>Av. Eugenio Garza Sada #427, CP 64849</p>
+        <p>Monterrey, Nuevo León.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Asistente IA Prototipo -->
+  <div class="chat-widget" onclick="alert('Prototipo Asistente IA SensoLab Bot 🤖:\n\n¡Hola! Soy el asistente virtual de SensoLab Solutions.\n¿En qué puedo ayudarte hoy?\n\n1. Información sobre servicios para empresas\n2. Cómo registrarte para evaluar productos y recibir recompensas\n3. Horarios y ubicación del laboratorio')">
+    💬 Asistente IA SensoBot
   </div>
 
 </body>
