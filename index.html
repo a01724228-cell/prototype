@@ -307,17 +307,44 @@
     </form>
   </section>
 
-  <!-- Footer con Contacto y Ubicación -->
+ <!-- Footer con Contacto, Redes Sociales, WhatsApp y Ubicación -->
   <footer id="contacto">
     <div class="footer-content">
-      <div>
+      <!-- Datos de Contacto Directo -->
+      <div style="flex: 1; min-width: 250px;">
         <h4>Contacto</h4>
         <p>Si deseas una cotización o información adicional de nuestros servicios, escríbenos a:</p>
         <p><strong>Email:</strong> <a href="mailto:contacto@sensolab.mx" style="color: white;">contacto@sensolab.mx</a></p>
+        
+        <!-- Comunidad de WhatsApp -->
+        <h4 style="margin-top: 1.5rem;">Canal de Avisos</h4>
+        <p style="font-size: 0.9rem; color: #ddd;">Únete a nuestra comunidad de WhatsApp para recibir avisos importantes:</p>
+        <a href="#" onclick="alert('Prototipo SensoLab:\n\n¡Próximamente!\nEste enlace dirigiá a la Comunidad Oficial de WhatsApp de SensoLab para enviar anuncios a los panelistas.'); return false;" class="btn" style="background-color: #25D366; color: white; padding: 0.5rem 1rem; font-size: 0.9rem; text-decoration: none;">
+          📱 Unirme al WhatsApp
+        </a>
       </div>
-      <div>
+
+      <!-- Redes Sociales -->
+      <div style="flex: 1; min-width: 200px;">
+        <h4>Síguenos en Redes</h4>
+        <p style="font-size: 0.9rem; color: #ddd;">Entérate de nuestros próximos estudios y novedades:</p>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.8rem;">
+          <a href="https://mx.linkedin.com/company/sensolab-solutions" target="_blank" style="color: #4da6ff; text-decoration: none; font-weight: 500;">
+            🔗 LinkedIn (SensoLab Solutions) ↗
+          </a>
+          <a href="#" onclick="alert('Prototipo SensoLab:\n\nEnlace configurado para su cuenta de Instagram.'); return false;" style="color: #ff6699; text-decoration: none; font-weight: 500;">
+            📸 Instagram (@sensolab.mx)
+          </a>
+          <a href="#" onclick="alert('Prototipo SensoLab:\n\nEnlace configurado para su página de TikTok.'); return false;" style="color: #66b3ff; text-decoration: none; font-weight: 500;">
+            📘 TikTok (@sensolab.mx)
+          </a>
+        </div>
+      </div>
+
+      <!-- Ubicación y Mapa Embed -->
+      <div style="flex: 1; min-width: 280px;">
         <h4>Ubicación</h4>
-        <p>Centro de Innovación y Transferencia Tecnológica</p>
+        <p>Centro de Innovación y Transferencia Tecnológica (CIT²)</p>
         <p>Av. Eugenio Garza Sada #427, CP 64849</p>
         <p>Monterrey, Nuevo León.</p>
         
@@ -327,7 +354,7 @@
             title="Ubicación SensoLab Solutions"
             src="https://maps.google.com/maps?q=25.652232,-100.292274&z=15&output=embed" 
             width="100%" 
-            height="220" 
+            height="180" 
             style="border:0;" 
             allowfullscreen="" 
             loading="lazy">
