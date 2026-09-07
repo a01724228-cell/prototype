@@ -35,16 +35,67 @@
       height: 45px;
       display: block;
     }
+    nav {
+      display: flex;
+      align-items: center;
+    }
     nav a {
-      margin-left: 1.5rem;
+      margin-left: 1.2rem;
       text-decoration: none;
       color: #ffffff;
       font-weight: 500;
       transition: color 0.2s ease;
+      white-space: nowrap;
     }
     nav a:hover {
       color: var(--accent-orange);
     }
+
+    /* Mobile Hamburger Icon */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: #ffffff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* Responsive Breakpoint for Mobile & Small Laptops */
+    @media (max-width: 900px) {
+      header {
+        padding: 0.8rem 1rem;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-bg);
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      nav.active {
+        display: flex;
+      }
+      nav a {
+        margin: 0.8rem 0;
+        padding: 0.5rem 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+
     .hero {
       text-align: center;
       padding: 4.5rem 1rem;
@@ -169,6 +220,7 @@
       gap: 10px;
       font-weight: bold;
       transition: transform 0.2s ease;
+      z-index: 999;
     }
     .chat-widget:hover {
       transform: scale(1.05);
@@ -181,13 +233,21 @@
     <div class="logo-container">
       <img src="logo.png" alt="SensoLab Solutions Logo">
     </div>
-    <nav>
-      <a href="#somos">¿Quiénes Somos?</a>
-      <a href="#instalaciones">Nuestras Instalaciones</a>
-      <a href="#trabajos-previos">Trabajos Previos</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#participa">Participa</a>
-      <a href="#contacto">Contacto</a>
+
+    <!-- Mobile Hamburger Toggle Button -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="#somos" onclick="closeMenu()">¿Quiénes Somos?</a>
+      <a href="#instalaciones" onclick="closeMenu()">Nuestras Instalaciones</a>
+      <a href="#trabajos-previos" onclick="closeMenu()">Trabajos Previos</a>
+      <a href="#servicios" onclick="closeMenu()">Servicios</a>
+      <a href="#participa" onclick="closeMenu()">Participa</a>
+      <a href="#contacto" onclick="closeMenu()">Contacto</a>
     </nav>
   </header>
 
@@ -208,7 +268,7 @@
     </div>
   </section>
 
-<!-- Nuestras Instalaciones -->
+  <!-- Nuestras Instalaciones -->
   <section id="instalaciones" class="section">
     <h2>Nuestras Instalaciones</h2>
     <p>Infraestructura especializada y tecnología de vanguardia para llevar a cabo evaluaciones sensoriales bajo condiciones estrictamente controladas.</p>
@@ -307,7 +367,7 @@
     </form>
   </section>
 
- <!-- Footer con Contacto, Redes Sociales, WhatsApp y Ubicación -->
+  <!-- Footer con Contacto, Redes Sociales, WhatsApp y Ubicación -->
   <footer id="contacto">
     <div class="footer-content">
       <!-- Datos de Contacto Directo -->
@@ -368,6 +428,19 @@
   <div class="chat-widget" onclick="alert('Prototipo Asistente IA SensoLab Bot 🤖:\n\n¡Hola! Soy el asistente virtual de SensoLab Solutions.\n¿En qué puedo ayudarte hoy?\n\n1. Información sobre servicios para empresas\n2. Cómo registrarte para evaluar productos y recibir recompensas\n3. Horarios y ubicación del laboratorio')">
     💬 Asistente IA SensoBot
   </div>
+
+  <!-- JavaScript for Responsive Menu Toggle -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('active');
+    }
+
+    function closeMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.remove('active');
+    }
+  </script>
 
 </body>
 </html>
